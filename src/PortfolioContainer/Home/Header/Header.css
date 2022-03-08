@@ -4,6 +4,7 @@
     height: 100px;
     color: var(--white);
     overflow: visible;
+    position: relative;
 }
 .logo{
    font-weight:900;

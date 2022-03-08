@@ -3,7 +3,7 @@ import './Testimonial.css'
 
 export default function Testimonial() {
   return (
-    <div className="">
+    <div className="container">
 <div class="heading-container">
     <div class="screen-heading">
         <span>Testimonial</span>
