@@ -1,6 +1,6 @@
 import React from 'react';
 import './Header.css';
-import Resume from '../../Resume/Resume';
+
 
 export default function Header() {
   return (
@@ -20,10 +20,10 @@ export default function Header() {
                             <a className="nav-link text-white" href="#"><span>AboutMe</span></a>
                             </li>
                             <li className="nav-item">
-                            <a className="nav-link text-white" href="#"><span>Resume</span></a>
+                            <a className="nav-link text-white" href="#" download="Arun Wosticv.pdf"><span>Resume</span></a>
                             </li>
                             <li className="nav-item">
-                            <a className="nav-link text-white" href='testimonial'><span>Testimonial</span></a>
+                            <a className="nav-link text-white" href='testimonial' ><span>Testimonial</span></a>
                             </li>
                             <li className="nav-item">
                             <a className="nav-link text-white" href='contact'><span>ContactMe</span></a>
@@ -31,7 +31,8 @@ export default function Header() {
                         </ul>
                         </div>
                     </div>
-                    </nav>    
+                    </nav>  
+                    
     </div>
   )
 }
