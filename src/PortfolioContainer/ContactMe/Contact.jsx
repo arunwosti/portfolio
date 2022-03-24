@@ -1,8 +1,22 @@
 import React from 'react';
 import './Contact.css';
 import img1 from '../../assets/Home/mailz.jpeg';
+import emailjs from 'emailjs-com';
 
 export default function Contact() {
+    function sendEmail(e){
+        e.preventDefault();
+
+        emailjs.sendForm(
+            'service_sx6ylv8',
+            'template_c1cwm0r',
+            e.target,
+            'ywoK4eXQDCk0jYOQs'
+            
+            ).then(res=>{
+                console.log(res);
+            }).catch(err => console.log(err));
+    }
   return (
     <div className='main-container' id='contactme'>
 <div class="heading-container">
@@ -41,14 +55,14 @@ export default function Contact() {
         <h4>Send Your Email Here!</h4>
         <img src={img1} alt="image not found"/>
     </div>
-    <form>
+    <form onSubmit={sendEmail}>
         <p></p>
-        <label for="name">Name</label><input type="text" value=""/>
-        <label for="email">Email</label><input type="email" value=""/>
-        <label for="message">Message</label><textarea type="text"></textarea>
-        <div class="send-btn">
-            <button type="submit">send<i class="fa fa-paper-plane"></i></button>
-        </div>
+        <label >Name</label><input type="text" name='name'/>
+        <label >Email</label><input type="email" name='email' />
+        <label >Message</label><textarea type="text" name='message'></textarea>
+        
+            <button type="submit" >send<i class="fa fa-paper-plane"></i></button>
+        
     </form>
     </div>
     </div>
