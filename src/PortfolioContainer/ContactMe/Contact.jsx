@@ -8,10 +8,10 @@ export default function Contact() {
         e.preventDefault();
 
         emailjs.sendForm(
-            'service_sx6ylv8',
-            'template_c1cwm0r',
+            'service_sx6ylv8', // gmail id
+            'template_c1cwm0r', // templateid
             e.target,
-            'ywoK4eXQDCk0jYOQs'
+            'ywoK4eXQDCk0jYOQs'//emailjs userid
             
             ).then(res=>{
                 console.log(res);
